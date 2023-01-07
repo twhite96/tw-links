@@ -1,0 +1,39 @@
+---
+export interface Props {
+	h2: string;
+}
+
+const { h2 } = Astro.props;
+---
+  <main>
+    <hr class="gradient-line"/>
+    <h2 class="title">For Fun</h2>
+  </main>
+
+<style>
+  main {
+  	display: flex;
+    padding: 0.15rem;
+    background-color: white;
+    background-size: 400%;
+    border-radius: 0.5rem;
+    background-position: 100%;;
+  }
+  .gradient-line {
+     margin: 0 0 50px 0;
+     display: block;
+     border: none;
+     height: 1px;
+     width: 100%;
+     background: #0071B9;
+     background: linear-gradient(to right, white, #ff1493, #2db4eb, #ff1493, white);
+  }
+
+  	.title {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      margin: 40px 0 60px 0;
+    }
+
+</style>

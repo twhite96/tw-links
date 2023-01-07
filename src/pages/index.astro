@@ -6,7 +6,9 @@ import '@fontsource/fira-code';
 
 <Layout title="tiff's links">
 	<main>
-	  <img src="https://res.cloudinary.com/twhiteblog/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,co_rgb:ffffff,fl_preserve_transparency,g_auto,q_100,r_max,w_339/v1633559929/best_ckhg1g.webp" />
+	  <div>
+	    <img src="https://res.cloudinary.com/twhiteblog/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,co_rgb:ffffff,fl_preserve_transparency,g_auto,q_100,r_max,w_399/v1633559929/best_ckhg1g.webp" />
+	  </div>
 		<h1>tiff's <span class="text-gradient">links</span></h1>
 		<p class="intro">
 			Your least favorite dev's least favorite dev.
@@ -33,9 +35,25 @@ import '@fontsource/fira-code';
 				body="My CV rewritten with Astro.js."
 			/>
 			<Card
-				href="https://resume.tiffanyrwhite.com/"
-				title="My resume,"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="https://failures.tiffanywhite.dev/"
+				title="Fails"
+				body="That time I batted below the Mendoza Line."
+			/>
+			<Card
+				href="https://tiffnotes.dev/"
+				title="Notes"
+				body="A collection of notes from Foam/Obsidian so I can Learn In Public™."
+			/>
+
+			<Card
+				href="https://www.backloggd.com/u/nogibullsh1t/"
+				title="Games"
+				body="A list of video games I'm enjoying."
+			/>
+			<Card
+				href="https://kit.co/tiffanywhite/my-office"
+				title="/uses"
+				body="My gear."
 			/>
 		</ul>
 	</main>
@@ -98,4 +116,14 @@ import '@fontsource/fira-code';
 		gap: 1rem;
 		padding: 0;
 	}
+
+	div {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 40%;
+  }
+
 </style>
