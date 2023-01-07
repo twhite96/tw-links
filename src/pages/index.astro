@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import '@fontsource/fira-code';
+---
+
+<Layout title="tiff's links">
+	<main>
+	  <img src="https://res.cloudinary.com/twhiteblog/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,co_rgb:ffffff,fl_preserve_transparency,g_auto,q_100,r_max,w_339/v1633559929/best_ckhg1g.webp" />
+		<h1>tiff's <span class="text-gradient">links</span></h1>
+		<p class="intro">
+			Your least favorite dev's least favorite dev.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://tiffanywhite.dev/"
+				title="Blog"
+				body="My very opinionated thoughts on software."
+			/>
+			<Card
+				href="https://www.tiffanywhite.dev/tag/shorts/"
+				title="Shorts"
+				body="Short notes about things I've found or read."
+			/>
+			<Card
+				href="https://portfoliobeta.vercel.app/"
+				title="WIP Portfolio"
+				body="My portfolio site rewritten with Next.js and hosted on Vercel."
+			/>
+			<Card
+				href="https://resume.tiffanyrwhite.com/"
+				title="My resume"
+				body="My CV rewritten with Astro.js."
+			/>
+			<Card
+				href="https://resume.tiffanyrwhite.com/"
+				title="My resume,"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+		text-align: center;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.intro {
+	  line-height: 1.6;
+  	margin: 1rem 0;
+  	text-align: center;
+  	font-size: 2rem;
+    font-weight: 500;
+  	padding: 1rem;
+    border-radius: 0.4rem;
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+		font-family: Fira Code, monospace;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+	  font-family: Fira Code, monospace;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
