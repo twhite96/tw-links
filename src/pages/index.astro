@@ -1,14 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import SocialIcon from '../components/SocialIcon.astro';
 import '@fontsource/fira-code';
 ---
 
 <Layout title="tiff's links">
 	<main>
-	  <div>
-	    <img src="https://res.cloudinary.com/twhiteblog/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,co_rgb:ffffff,fl_preserve_transparency,g_auto,q_100,r_max,w_399/v1633559929/best_ckhg1g.webp" />
-	  </div>
+	  <container>
+	    <img src="https://res.cloudinary.com/twhiteblog/image/upload/v1674171747/factoryofsadness_neon_background_portrait_81ad677b-151c-4ef9-8cb0-d1fccd9a5e1c_cklgdp.webp" />
+	  </container>
 		<h1>tiff's <span class="text-gradient">links</span></h1>
 		<p class="intro">
 			Your least favorite dev's least favorite dev.
@@ -56,7 +57,28 @@ import '@fontsource/fira-code';
 				body="My gear."
 			/>
 		</ul>
+		  <section id="social" class="justify-center flex flex-row mb-2">
+         <div class="mr-4">
+           <SocialIcon icon="fa-brands:github" label="github" url="https://github.com/twhite96" />
+         </div>
+         <div class="mr-4">
+           <SocialIcon icon="fa-brands:linkedin" label="linkedin" url="https://linkedin.com/in/tiffanyrwhite" />
+         </div>
+         <div class="mr-4">
+           <SocialIcon
+             icon="fa-brands:stack-overflow"
+             label="stack-overflow"
+             url="https://stackoverflow.com/users/3800146/tiffanywhitedev"
+           />
+         </div>
+         <div>
+           <SocialIcon icon="ant-design:global-outlined" label="website" url="https://www.tiffanyrwhite.com" />
+         </div>
+       </section>
 	</main>
+
+
+
 </Layout>
 
 <style>
@@ -117,7 +139,7 @@ import '@fontsource/fira-code';
 		padding: 0;
 	}
 
-	div {
+	.container {
     display: flex;
     justify-content: center;
   }
