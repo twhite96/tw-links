@@ -5,16 +5,16 @@ export interface Props {
   url: string;
   icon: string;
   label: string;
+  color: string
 }
 
-const { url, icon, label } = Astro.props;
+const { url, icon, label, color } = Astro.props;
 ---
 
 <a
   href={url}
-  class="hover:text-sky-400 dark:text-white dark:hover:text-sky-300"
   aria-label={label}
   rel="noopener"
 >
-  <Icon class="h-5" name={icon} />
+  <Icon class="h-8" color={color} name={icon} />
 </a>

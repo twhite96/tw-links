@@ -1,9 +1,9 @@
 ---
-export interface Props {
-	h2: string;
-}
+// export interface Props {
+// 	h2: string;
+// }
 
-const { h2 } = Astro.props;
+// const { h2 } = Astro.props;
 ---
   <main>
     <hr class="gradient-line"/>
@@ -12,12 +12,14 @@ const { h2 } = Astro.props;
 
 <style>
   main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
   	display: flex;
-    padding: 0.15rem;
     background-color: white;
     background-size: 400%;
     border-radius: 0.5rem;
-    background-position: 100%;;
+    background-position: 100%;
   }
   .gradient-line {
      margin: 0 0 50px 0;

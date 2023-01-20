@@ -7,9 +7,9 @@ import '@fontsource/fira-code';
 
 <Layout title="tiff's links">
 	<main>
-	  <container>
-	    <img src="https://res.cloudinary.com/twhiteblog/image/upload/v1674171747/factoryofsadness_neon_background_portrait_81ad677b-151c-4ef9-8cb0-d1fccd9a5e1c_cklgdp.webp" />
-	  </container>
+	  <div>
+	    <img src="https://res.cloudinary.com/twhiteblog/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,co_rgb:ffffff,g_auto,q_100,r_max,w_399/v1674171747/factoryofsadness_neon_background_portrait_81ad677b-151c-4ef9-8cb0-d1fccd9a5e1c_cklgdp.webp" />
+	  </div>
 		<h1>tiff's <span class="text-gradient">links</span></h1>
 		<p class="intro">
 			Your least favorite dev's least favorite dev.
@@ -46,6 +46,11 @@ import '@fontsource/fira-code';
 				body="A collection of notes from Foam/Obsidian so I can Learn In Public™."
 			/>
 
+      <!-- Put the gradient line below the h2. See block and inline block elements in the MDN -->
+      <!-- <div slot="divider">
+        <hr class="gradient-line"/>
+        <h2 class="title">For Fun</h2>
+      </div> -->
 			<Card
 				href="https://www.backloggd.com/u/nogibullsh1t/"
 				title="Games"
@@ -76,9 +81,22 @@ import '@fontsource/fira-code';
          </div>
        </section>
 	</main>
-
-
-
+  <section id="social-icons" class="justify-center flex flex-row mb-2"> 
+    <div class="mr-4">
+      <SocialIcon icon="simple-icons:github" color="black" label="github" url="https://github.com/twhite96" />
+    </div>
+    <div class="mr-4">
+      <SocialIcon icon="simple-icons:linkedin" color="#0A66C2" label="linkedin" url="https://linkedin.com/in/tiffanyrwhite" />
+    </div>
+    <div class="mr-4">
+      <SocialIcon
+        icon="fa-brands:stack-overflow"
+        label="stack-overflow"
+        color="orange"
+        url="https://stackoverflow.com/users/3800146/tiffanywhitedev"
+      />
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -138,8 +156,16 @@ import '@fontsource/fira-code';
 		gap: 1rem;
 		padding: 0;
 	}
-
-	.container {
+  .gradient-line {
+     margin: 0 0 50px 0;
+     display: block;
+     border: none;
+     height: 1px;
+     width: 100%;
+     background: #0071B9;
+     background: linear-gradient(to right, white, #ff1493, #2db4eb, #ff1493, white);
+  }
+	div {
     display: flex;
     justify-content: center;
   }
