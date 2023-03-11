@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import SocialIcon from '../components/SocialIcon.astro';
+import Divider from '../components/Divider.astro';
 import '@fontsource/fira-code';
 ---
 
@@ -26,7 +27,7 @@ import '@fontsource/fira-code';
 				body="Short notes about things I've found or read."
 			/>
 			<Card
-				href="https://portfoliobeta.vercel.app/"
+				href="https://www.tiffanyrwhite.com/"
 				title="WIP Portfolio"
 				body="My portfolio site rewritten with Next.js and hosted on Vercel."
 			/>
@@ -40,12 +41,18 @@ import '@fontsource/fira-code';
       title="Notes"
       body="A collection of notes from Foam/Obsidian so I can Learn In Public™."
 			/>
-      
-      <!-- Put the gradient line below the h2. See block and inline block elements in the MDN -->
-      <!-- <div slot="divider">
-        <hr class="gradient-line"/>
-        <h2 class="title">For Fun</h2>
-      </div> -->
+			<Card
+      href="https://0xda.org/"
+      title="The Untitled Pen Tester Blog"
+      body="A place for me to do DevOpsSec experiments and talk about them."
+			/>
+    </ul>
+    <br />
+    <Divider />
+    <p class="fun">
+      For Fun
+    </p>
+    <ul role="list" class="link-card-grid">
 			<Card
       href="https://www.backloggd.com/u/nogibullsh1t/"
       title="Games"
@@ -61,6 +68,7 @@ import '@fontsource/fira-code';
 				title="/uses"
 				body="My gear."
 			/>
+    </ul>
 	</main>
   <section id="social-icons" class="justify-center flex flex-row mb-2"> 
     <div class="mr-4">
@@ -123,7 +131,13 @@ import '@fontsource/fira-code';
 		background-size: 400%;
 		background-position: 0%;
 	}
-
+  
+  .fun {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+  }
 	.intro {
 	  line-height: 1.6;
   	margin: 1rem 0;
