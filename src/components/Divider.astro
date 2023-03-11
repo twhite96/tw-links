@@ -1,28 +1,19 @@
 ---
-// export interface Props {
-// 	h2: string;
-// }
+export interface Props {
+  noPadding?: boolean;
+  ariaHidden?: boolean;
+}
 
-// const { h2 } = Astro.props;
+const { noPadding = false, ariaHidden = true } = Astro.props;
 ---
-  <main>
-    <hr class="gradient-line"/>
-    <h2 class="title">For Fun</h2>
-  </main>
+
+<div class={`max-w-3xl mx-auto ${noPadding ? "px-0" : "pt-1"}`}>
+  <hr class="gradient-line " aria-hidden={ariaHidden} />
+</div>
 
 <style>
-  main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-  	display: flex;
-    background-color: white;
-    background-size: 400%;
-    border-radius: 0.5rem;
-    background-position: 100%;
-  }
   .gradient-line {
-     margin: 0 0 50px 0;
+     margin: 0 0 10px 0;
      display: block;
      border: none;
      height: 1px;
@@ -30,12 +21,4 @@
      background: #0071B9;
      background: linear-gradient(to right, white, #ff1493, #2db4eb, #ff1493, white);
   }
-
-  	.title {
-      display: inline-block;
-      width: auto;
-      text-align: center;
-      margin: 40px 0 60px 0;
-    }
-
 </style>
